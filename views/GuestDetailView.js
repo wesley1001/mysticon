@@ -37,14 +37,20 @@ class ExpandableText extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, flexDirection: 'column' }}>
-        { this.state.showMore ? (
-          <View><HtmlView value={ this.props.text } /></View>
+        { this.props.text && this.props.text.length >= this.props.max ? (
+          <View>
+            { this.state.showMore ? (
+              <View><HtmlView value={ this.props.text } /></View>
+            ) : (
+              <HtmlView value={ this.props.text.substr(0, this.props.max)+"..." } />
+            ) }
+            <TouchableOpacity onPress={ this.toggleMore.bind(this) }>
+              <Text style={ this.props.btnStyle }>{ this.state.btnText }</Text>
+            </TouchableOpacity>
+          </View>
         ) : (
-          <HtmlView value={ this.props.text.substr(0, this.props.max)+"..." } />
+          <HtmlView value={ this.props.text } />
         ) }
-        <TouchableOpacity onPress={ this.toggleMore.bind(this) }>
-          <Text style={ this.props.btnStyle }>{ this.state.btnText }</Text>
-        </TouchableOpacity>
       </View>
     )
   }
@@ -52,8 +58,9 @@ class ExpandableText extends React.Component {
 ExpandableText.defaultProps = {
   btnStyle: {
     color: globalStyles.COLORS.highlight,
+    fontSize: 12,
     fontWeight: 'bold',
-    marginTop: 3,
+    paddingBottom: 15,
     textAlign: 'right'
   },
   defaultOpen: false,
