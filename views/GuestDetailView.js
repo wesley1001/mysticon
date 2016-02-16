@@ -6,7 +6,7 @@ import React, {
   ScrollView,
   StyleSheet,
   Text,
-  TouchableHighlight,
+  TouchableOpacity,
   View
 } from 'react-native';
 
@@ -18,6 +18,47 @@ import globalStyles from '../globalStyles';
 import EventItem from '../components/EventItem';
 import { H1, H2, H3, H4 } from '../components/Headings';
 
+
+class ExpandableText extends React.Component {
+  constructor(props) {
+    super();
+    this.state = {
+      showMore : props.defaultOpen,
+      btnText  : props.defaultOpen ? 'Show Less' : 'Show More'
+    }
+  }
+  toggleMore() {
+    let show = !this.state.showMore;
+    this.setState({
+      showMore : show,
+      btnText  : show ? 'Show Less' : 'Show More'
+    });
+  }
+  render() {
+    return (
+      <View style={{ flex: 1, flexDirection: 'column' }}>
+        { this.state.showMore ? (
+          <View><HtmlView value={ this.props.text } /></View>
+        ) : (
+          <HtmlView value={ this.props.text.substr(0, this.props.max)+"..." } />
+        ) }
+        <TouchableOpacity onPress={ this.toggleMore.bind(this) }>
+          <Text style={ this.props.btnStyle }>{ this.state.btnText }</Text>
+        </TouchableOpacity>
+      </View>
+    )
+  }
+}
+ExpandableText.defaultProps = {
+  btnStyle: {
+    color: globalStyles.COLORS.highlight,
+    fontWeight: 'bold',
+    marginTop: 3,
+    textAlign: 'right'
+  },
+  defaultOpen: false,
+  max: 140
+};
 
 export default class GuestDetailView extends Component {
 
@@ -31,11 +72,12 @@ export default class GuestDetailView extends Component {
       .filter(e => e.guest_list.includes(guest.guest_id))
       .map(e => e.event_id);
 
-    console.log("GUEST",guest);
     return (
       <ScrollView style={ styles.view }>
         <H1>{ guest.name }</H1>
-        <HtmlView value={ guest.bio } />
+
+        <ExpandableText text={ guest.bio } />
+
         <H4>Itinerary</H4>
         <View style={[styles.list, globalStyles.floatingList]}>
           { guest.event_list ? guest.event_list.map(e => (

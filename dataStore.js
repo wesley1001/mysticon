@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react-native';
+import _     from 'lodash';
 
 let {
   AsyncStorage
@@ -16,12 +17,31 @@ let fetchOptions = {
 
 export default {
 
+  fetchGaming: () => {
+    return new Promise((resolve, reject) => {
+      fetch('http://con-nexus.bgun.me/mysticon_gaming.json', fetchOptions)
+        .then(resp => resp.json())
+        .then(data => {
+          resolve(_.sortBy(data.items, 'datetime'));
+        })
+        .catch(e => {
+          global.makeToast("Network error", "error");
+          resolve([]);
+        })
+        .done();
+    });
+  },
+
   fetchNews: () => {
     return new Promise((resolve, reject) => {
       fetch('http://con-nexus.bgun.me/api/news?con_id=mysticon2016', fetchOptions)
         .then(resp => resp.json())
         .then(data => {
           resolve(data.items);
+        })
+        .catch(e => {
+          global.makeToast("Error fetching news. You need an Internet connection for this.", "error");
+          resolve([]);
         })
         .done();
     });
@@ -34,6 +54,9 @@ export default {
         .then(data => {
           resolve(data);
         })
+        .catch(e => {
+          resolve(false);
+        })
         .done();
     });
   },
@@ -43,6 +66,9 @@ export default {
       AsyncStorage.getItem('con_data')
         .then(resp => {
           resolve(JSON.parse(resp));
+        })
+        .catch(e => {
+          resolve(false);
         })
         .done();
     });
@@ -54,6 +80,9 @@ export default {
       AsyncStorage.setItem('con_data', str)
         .then(resp => {
           resolve(true);
+        })
+        .catch(e => {
+          resolve(false);
         })
         .done();
     });
@@ -67,6 +96,10 @@ export default {
           global.todos = todos;
           resolve(todos);
         })
+        .catch(e => {
+          global.makeToast("Error fetching to-do list", "error");
+          resolve(false);
+        })
         .done();
     });
   },
@@ -76,6 +109,10 @@ export default {
     AsyncStorage.setItem('todo', JSON.stringify(todo_array))
       .then(resp => {
         console.log("save todos", resp);
+      })
+      .catch(e => {
+        global.makeToast("Error saving to-do list", "error");
+        resolve(false);
       })
       .done();
   }

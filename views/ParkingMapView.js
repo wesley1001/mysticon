@@ -16,7 +16,7 @@ import globalStyles from '../globalStyles';
 let window = Dimensions.get('window');
 
 
-export default class HotelMapView extends React.Component {
+export default class ParkingMapView extends React.Component {
 
   constructor() {
     super();
@@ -79,7 +79,7 @@ export default class HotelMapView extends React.Component {
       <View style={ styles.container } {...this._panResponder.panHandlers}>
         <Image
           style={[ styles.map, { left: this.state.mapX, top: this.state.mapY} ]}
-          source={ require('../img/hotel_map.jpg') }
+          source={ require('../img/parking_map.jpg') }
           />
       </View>
     );
@@ -95,8 +95,8 @@ var styles = StyleSheet.create({
   map: {
     borderColor: globalStyles.COLORS.highlight,
     borderWidth: 40,
-    height: 700,
+    height: 572,
     position: 'absolute',
-    width: 1000
+    width: 745
   }
 });

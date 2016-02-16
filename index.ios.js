@@ -23,13 +23,15 @@ import SideMenu from 'react-native-side-menu';
 
 import AboutView       from './views/AboutView';
 import DashboardView   from './views/DashboardView';
+import DirectionsView  from './views/DirectionsView';
 import EventDetailView from './views/EventDetailView';
 import FeedbackView    from './views/FeedbackView';
+import GamingView      from './views/GamingView';
 import GuestDetailView from './views/GuestDetailView';
 import GuestsView      from './views/GuestsView';
 import HotelMapView    from './views/HotelMapView';
-import LocalMapView    from './views/LocalMapView';
 import NewsView        from './views/NewsView';
+import ParkingMapView  from './views/ParkingMapView';
 import ScheduleView    from './views/ScheduleView';
 
 import Menu      from './components/Menu';
@@ -127,15 +129,17 @@ class Mysticon extends Component {
               <Route name="dashboard" schema="tab" title="Home"      component={ DashboardView } />
               <Route name="schedule"  schema="tab" title="Schedule"  component={ ScheduleView }  />
               <Route name="guests"    schema="tab" title="Guests"    component={ GuestsView }    />
-              <Route name="hotelMap"  schema="tab" title="Hotel Map" component={ HotelMapView } />
 
               <Route name="eventDetail" title="Event"     component={ EventDetailView } />
               <Route name="guestDetail" title="Guest"     component={ GuestDetailView } />
 
-              <Route name="localMap"  title="Local Map" component={ LocalMapView } />
-              <Route name="feedback"  title="Feedback"  component={ FeedbackView } schema="modal"/>
-              <Route name="about"     title="About"     component={ AboutView    } />
-              <Route name="newsFeed"  title="News"      component={ NewsView     } />
+              <Route name="directions" title="Maps & Directions" component={ DirectionsView } />
+              <Route name="hotelMap"   title="Hotel Map"   component={ HotelMapView } />
+              <Route name="parkingMap" title="Parking Map" component={ ParkingMapView } />
+              <Route name="gaming"     title="Gaming"      component={ GamingView } />
+              <Route name="feedback"   title="Feedback"    component={ FeedbackView } schema="modal"/>
+              <Route name="about"      title="About"       component={ AboutView    } />
+              <Route name="newsFeed"   title="News"        component={ NewsView     } />
             </Router>
           </View>
           <TouchableOpacity style={ styles.menuButton } onPress={ () => Actions.newsFeed() }>

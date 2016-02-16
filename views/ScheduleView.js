@@ -104,7 +104,7 @@ export default class ScheduleView extends Component {
 
   render() {
     return (
-      <View>
+      <View style={{ flex: 1 }}>
         { this.state.searchResults.length ? (
           <View>
             <View style={[styles.section, { marginTop: 39 }]}><Text style={ styles.sectionText }>SEARCH RESULTS</Text></View>
@@ -148,12 +148,8 @@ const styles = StyleSheet.create({
   },
   scroll: {
     backgroundColor: '#FFFFFF',
-    paddingBottom: 100,
-    marginTop: 39,
-    height: window.height - 40,
-    position: 'absolute',
-      left: 0,
-    width: window.width
+    flex: 1,
+    marginTop: 39
   },
   searchResults: {
     backgroundColor: '#F8F8F8',

@@ -16,15 +16,29 @@ export default class Toast extends React.Component {
   constructor() {
     super();
     this.state = {
-      text: 'ERROR',
-      bottom: new Animated.Value(-60)
+      bgColor: this.getBgColor(),
+      bottom: new Animated.Value(-60),
+      text: 'ERROR'
+    }
+  }
+
+  getBgColor(type) {
+    let colorsMap = {
+      default: "black",
+      error: '#C00'
+    };
+    if (type && colorsMap[type]) {
+      return colorsMap[type];
+    } else {
+      return colorsMap["default"];
     }
   }
 
   componentWillMount() {
-    global.makeToast = (text) => {
+    global.makeToast = (text, type) => {
       this.setState({
-        text: text
+        text: text,
+        bgColor: this.getBgColor(type)
       });
 
       // add
@@ -45,7 +59,7 @@ export default class Toast extends React.Component {
 
   render() {
     return (
-      <Animated.View style={[ styles.toast, { bottom: this.state.bottom } ]}>
+      <Animated.View style={[ styles.toast, { backgroundColor: this.state.bgColor, bottom: this.state.bottom } ]}>
         <Text style={ styles.text }>{ this.state.text }</Text>
       </Animated.View>
     );
@@ -57,16 +71,16 @@ export default class Toast extends React.Component {
 let styles = StyleSheet.create({
   toast: {
     alignItems: 'center',
-    backgroundColor: 'black',
     borderRadius: 12,
     flex: 1,
     justifyContent: 'center',
     opacity: 0.9,
+    paddingHorizontal: 80,
     paddingVertical: 10,
     position: 'absolute',
+      left: 50,
+      right: 50,
       bottom: 60,
-      left: 60,
-      right: 60,
     shadowColor: "#000000",
     shadowOpacity: 0.3,
     shadowRadius: 20
@@ -75,7 +89,6 @@ let styles = StyleSheet.create({
     backgroundColor: 'transparent',
     color: 'white',
     flex: 1,
-    fontSize: 14,
-    paddingHorizontal: 30
+    fontSize: 14
   }
 });
