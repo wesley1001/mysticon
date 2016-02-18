@@ -36,7 +36,7 @@ import ScheduleView    from './views/ScheduleView';
 
 import Menu      from './components/Menu';
 import Tabbers   from './components/Tabbers'
-import Toast     from './components/Toast';
+import Toast     from './components/Toast.ios';
 
 import dataStore from './dataStore';
 

@@ -76,7 +76,7 @@ export default class GuestDetailView extends Component {
       return null;
     }
     guest.event_list = global.con_data.events
-      .filter(e => e.guest_list.includes(guest.guest_id))
+      .filter(e => _.includes(e.guest_list, guest.guest_id))
       .map(e => e.event_id);
 
     return (

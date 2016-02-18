@@ -7,6 +7,7 @@ import React, {
   Alert,
   AppRegistry,
   AsyncStorage,
+  BackAndroid,
   Component,
   Dimensions,
   Navigator,
@@ -50,7 +51,12 @@ class Mysticon extends Component {
     this.state = {
       loading: true,
       menuOpen: false
-    }
+    };
+
+    BackAndroid.addEventListener('hardwareBackPress', function() {
+      Actions.pop();
+      return true;
+    });
   }
 
   componentWillMount() {
@@ -188,9 +194,10 @@ let styles = StyleSheet.create({
     backgroundColor: globalStyles.COLORS.headerBg,
     borderBottomColor: '#324',
     borderBottomWidth: 1,
+    height: 50
   },
   scene: {
-    paddingTop: 63
+    paddingTop: 50
   },
   newsDot: {
     backgroundColor: 'red',
