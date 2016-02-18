@@ -39,7 +39,7 @@ export default class AboutView extends Component {
           <H3>Hotel Info</H3>
         </View>
         <View style={ styles.btn }>
-          <ExternalLink url="http://google.com">
+          <ExternalLink url="https://www.google.com/maps/place/Holiday+Inn+Roanoke-Tanglewood-Rt+419%26i581/@37.2252603,-79.986239,17z">
             <Text style={[ styles.address, { fontWeight: 'bold' }]}>Holiday Inn – Tanglewood</Text>
             <Text style={ styles.address }>4468 Starkey Road, SW</Text>
             <Text style={ styles.address }>Roanoke, VA 24018</Text>
@@ -77,6 +77,7 @@ const styles = StyleSheet.create({
   btnText: {
     color: '#548',
     fontSize: 16,
+    fontWeight: 'bold',
     textAlign: 'center'
   },
   phone: {
