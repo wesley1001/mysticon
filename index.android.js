@@ -127,7 +127,8 @@ class Mysticon extends Component {
               sceneStyle={ styles.scene }
               navigationBarStyle={ styles.navbar }
               footer={ Tabbers }
-              onPressMenuButton={ () => this.openMenu() }>
+              onPressMenuButton={ () => this.openMenu() }
+            >
               <Schema name="modal"   sceneConfig={ Navigator.SceneConfigs.FloatFromBottom }/>
               <Schema name="default" sceneConfig={ Navigator.SceneConfigs.FloatFromRight  }/>
               <Schema name="tab" type="reset" />
@@ -148,7 +149,7 @@ class Mysticon extends Component {
               <Route name="newsFeed"   title="News"        component={ NewsView     } />
             </Router>
           </View>
-          <TouchableOpacity style={ styles.menuButton } onPress={ () => Actions.newsFeed() }>
+          <TouchableOpacity style={ styles.newsButton } onPress={ () => Actions.newsFeed() }>
             <Icon name="bell" size={22} color="white" />
             <View style={ styles.newsDot } />
           </TouchableOpacity>
@@ -172,16 +173,6 @@ let styles = StyleSheet.create({
     shadowOpacity: 0.5,
     shadowRadius: 12
   },
-  menuButton: {
-    alignItems: 'center',
-    height: 50,
-    justifyContent: 'center',
-    marginTop: 18,
-    position: 'absolute',
-    right: 0,
-    top: 0,
-    width: 50
-  },
   loading: {
     backgroundColor: 'white',
     opacity: 0.5,
@@ -198,6 +189,16 @@ let styles = StyleSheet.create({
   },
   scene: {
     paddingTop: 50
+  },
+  newsButton: {
+    alignItems: 'center',
+    height: 50,
+    justifyContent: 'center',
+    marginTop: 18,
+    position: 'absolute',
+    right: 0,
+    top: -15,
+    width: 50
   },
   newsDot: {
     backgroundColor: 'red',

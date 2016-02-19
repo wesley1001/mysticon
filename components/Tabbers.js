@@ -16,20 +16,10 @@ let window = Dimensions.get('window');
 
 
 class TabIcon extends React.Component {
-  handlePress() {
-    if (this.props.onPress) {
-      this.props.onPress();
-      return;
-    }
-    this.setState({
-      selected: true
-    });
-    Actions[this.props.action]();
-  }
   render() {
     return (
-      <TouchableOpacity style={ styles.tab } onPress={ this.handlePress.bind(this) }>
-        <Icon name={ this.props.icon } color="#558" size={ this.props.iconSize || 20 } />
+      <TouchableOpacity style={ styles.tab } onPress={ this.props.onPress }>
+        <Icon name={ this.props.icon } color='#558' size={ this.props.iconSize || 20 } />
         <Text style={{ color: '#335' }}>{ this.props.text }</Text>
       </TouchableOpacity>
     );
@@ -37,16 +27,37 @@ class TabIcon extends React.Component {
 }
 
 export default class Tabbers extends React.Component {
+
+  constructor() {
+    super();
+    this.state = {
+      selected: 0
+    }
+  }
+
+  handlePress(action) {
+    if (action === "menu") {
+      this.props.onPressMenuButton();
+      return;
+    } else {
+      Actions[action]();
+    }
+    this.setState({
+      selected: action
+    });
+  }
+
   render() {
     return (
       <View style={ styles.container }>
-        <TabIcon icon="home"     action="dashboard" text="Home" />
-        <TabIcon icon="calendar" action="schedule"  text="Schedule" />
-        <TabIcon icon="users"    action="guests"    text="Guests" />
-        <TabIcon icon="dots-three-horizontal"  onPress={ this.props.onPressMenuButton } text="More" />
+        <TabIcon onPress={ this.handlePress.bind(this, "dashboard") } icon="home"                  text="Home" />
+        <TabIcon onPress={ this.handlePress.bind(this, "schedule" ) } icon="calendar"              text="Schedule" />
+        <TabIcon onPress={ this.handlePress.bind(this, "guests"   ) } icon="users"                 text="Guests" />
+        <TabIcon onPress={ this.handlePress.bind(this, "menu"     ) } icon="dots-three-horizontal" text="More" />
       </View>
     );
   }
+
 }
 
 let styles = StyleSheet.create({

@@ -1277,7 +1277,8 @@ GLOBAL.document.createElement=null;}
 
 GLOBAL.MutationObserver=undefined;})(
 this);
-__d('ConNexusReact/index.android.js',function(global, require, module, exports) {  'use strict';var _reactNative=require('react-native/Libraries/react-native/react-native.js');var _reactNative2=babelHelpers.interopRequireDefault(_reactNative);var _reactNativeRouterFlux=require('react-native-router-flux/index.js');var _Entypo=require('react-native-vector-icons/Entypo.js');var _Entypo2=babelHelpers.interopRequireDefault(_Entypo);var _reactNativeSideMenu=require('react-native-side-menu/index.js');var _reactNativeSideMenu2=babelHelpers.interopRequireDefault(_reactNativeSideMenu);var _AboutView=require('ConNexusReact/views/AboutView.js');var _AboutView2=babelHelpers.interopRequireDefault(_AboutView);var _DashboardView=require('ConNexusReact/views/DashboardView.js');var _DashboardView2=babelHelpers.interopRequireDefault(_DashboardView);var _DirectionsView=require('ConNexusReact/views/DirectionsView.js');var _DirectionsView2=babelHelpers.interopRequireDefault(_DirectionsView);var _EventDetailView=require('ConNexusReact/views/EventDetailView.js');var _EventDetailView2=babelHelpers.interopRequireDefault(_EventDetailView);var _FeedbackView=require('ConNexusReact/views/FeedbackView.js');var _FeedbackView2=babelHelpers.interopRequireDefault(_FeedbackView);var _GamingView=require('ConNexusReact/views/GamingView.js');var _GamingView2=babelHelpers.interopRequireDefault(_GamingView);var _GuestDetailView=require('ConNexusReact/views/GuestDetailView.js');var _GuestDetailView2=babelHelpers.interopRequireDefault(_GuestDetailView);var _GuestsView=require('ConNexusReact/views/GuestsView.js');var _GuestsView2=babelHelpers.interopRequireDefault(_GuestsView);var _HotelMapView=require('ConNexusReact/views/HotelMapView.js');var _HotelMapView2=babelHelpers.interopRequireDefault(_HotelMapView);var _NewsView=require('ConNexusReact/views/NewsView.js');var _NewsView2=babelHelpers.interopRequireDefault(_NewsView);var _ParkingMapView=require('ConNexusReact/views/ParkingMapView.js');var _ParkingMapView2=babelHelpers.interopRequireDefault(_ParkingMapView);var _ScheduleView=require('ConNexusReact/views/ScheduleView.js');var _ScheduleView2=babelHelpers.interopRequireDefault(_ScheduleView);var _Menu=require('ConNexusReact/components/Menu.js');var _Menu2=babelHelpers.interopRequireDefault(_Menu);var _Tabbers=require('ConNexusReact/components/Tabbers.js');var _Tabbers2=babelHelpers.interopRequireDefault(_Tabbers);var _Toast=require('ConNexusReact/components/Toast.js');var _Toast2=babelHelpers.interopRequireDefault(_Toast);var _dataStore=require('ConNexusReact/dataStore.js');var _dataStore2=babelHelpers.interopRequireDefault(_dataStore);var _globalStyles=require('ConNexusReact/globalStyles.js');var _globalStyles2=babelHelpers.interopRequireDefault(_globalStyles);var
+__d('ConNexusReact/index.android.js',function(global, require, module, exports) {  'use strict';var _reactNative=require('react-native/Libraries/react-native/react-native.js');var _reactNative2=babelHelpers.interopRequireDefault(_reactNative);var _reactNativeRouterFlux=require('react-native-router-flux/index.js');var _Entypo=require('react-native-vector-icons/Entypo.js');var _Entypo2=babelHelpers.interopRequireDefault(_Entypo);var _reactNativeSideMenu=require('react-native-side-menu/index.js');var _reactNativeSideMenu2=babelHelpers.interopRequireDefault(_reactNativeSideMenu);var _AboutView=require('ConNexusReact/views/AboutView.js');var _AboutView2=babelHelpers.interopRequireDefault(_AboutView);var _DashboardView=require('ConNexusReact/views/DashboardView.js');var _DashboardView2=babelHelpers.interopRequireDefault(_DashboardView);var _DirectionsView=require('ConNexusReact/views/DirectionsView.js');var _DirectionsView2=babelHelpers.interopRequireDefault(_DirectionsView);var _EventDetailView=require('ConNexusReact/views/EventDetailView.js');var _EventDetailView2=babelHelpers.interopRequireDefault(_EventDetailView);var _FeedbackView=require('ConNexusReact/views/FeedbackView.js');var _FeedbackView2=babelHelpers.interopRequireDefault(_FeedbackView);var _GamingView=require('ConNexusReact/views/GamingView.js');var _GamingView2=babelHelpers.interopRequireDefault(_GamingView);var _GuestDetailView=require('ConNexusReact/views/GuestDetailView.js');var _GuestDetailView2=babelHelpers.interopRequireDefault(_GuestDetailView);var _GuestsView=require('ConNexusReact/views/GuestsView.js');var _GuestsView2=babelHelpers.interopRequireDefault(_GuestsView);var _HotelMapView=require('ConNexusReact/views/HotelMapView.js');var _HotelMapView2=babelHelpers.interopRequireDefault(_HotelMapView);var _NewsView=require('ConNexusReact/views/NewsView.js');var _NewsView2=babelHelpers.interopRequireDefault(_NewsView);var _ParkingMapView=require('ConNexusReact/views/ParkingMapView.js');var _ParkingMapView2=babelHelpers.interopRequireDefault(_ParkingMapView);var _ScheduleView=require('ConNexusReact/views/ScheduleView.js');var _ScheduleView2=babelHelpers.interopRequireDefault(_ScheduleView);var _Menu=require('ConNexusReact/components/Menu.js');var _Menu2=babelHelpers.interopRequireDefault(_Menu);var _Tabbers=require('ConNexusReact/components/Tabbers.js');var _Tabbers2=babelHelpers.interopRequireDefault(_Tabbers);var _Toast=require('ConNexusReact/components/Toast.js');var _Toast2=babelHelpers.interopRequireDefault(_Toast);var _dataStore=require('ConNexusReact/dataStore.js');var _dataStore2=babelHelpers.interopRequireDefault(_dataStore);var _globalStyles=require('ConNexusReact/globalStyles.js');var _globalStyles2=babelHelpers.interopRequireDefault(_globalStyles);var 
+
 
 
 
@@ -1328,7 +1329,12 @@ function Mysticon(){babelHelpers.classCallCheck(this,Mysticon);var _this=babelHe
 
 _this.state={
 loading:true,
-menuOpen:false};return _this;}babelHelpers.createClass(Mysticon,[{key:'componentWillMount',value:function componentWillMount()
+menuOpen:false};
+
+
+_reactNative.BackAndroid.addEventListener('hardwareBackPress',function(){
+_reactNativeRouterFlux.Actions.pop();
+return true;});return _this;}babelHelpers.createClass(Mysticon,[{key:'componentWillMount',value:function componentWillMount()
 
 
 
@@ -1401,6 +1407,7 @@ sceneStyle:styles.scene,
 navigationBarStyle:styles.navbar,
 footer:_Tabbers2.default,
 onPressMenuButton:function(){return _this3.openMenu();}},
+
 _reactNative2.default.createElement(_reactNativeRouterFlux.Schema,{name:'modal',sceneConfig:_reactNative.Navigator.SceneConfigs.FloatFromBottom}),
 _reactNative2.default.createElement(_reactNativeRouterFlux.Schema,{name:'default',sceneConfig:_reactNative.Navigator.SceneConfigs.FloatFromRight}),
 _reactNative2.default.createElement(_reactNativeRouterFlux.Schema,{name:'tab',type:'reset'}),
@@ -1421,7 +1428,7 @@ _reactNative2.default.createElement(_reactNativeRouterFlux.Route,{name:'about',t
 _reactNative2.default.createElement(_reactNativeRouterFlux.Route,{name:'newsFeed',title:'News',component:_NewsView2.default}))),
 
 
-_reactNative2.default.createElement(_reactNative.TouchableOpacity,{style:styles.menuButton,onPress:function(){return _reactNativeRouterFlux.Actions.newsFeed();}},
+_reactNative2.default.createElement(_reactNative.TouchableOpacity,{style:styles.newsButton,onPress:function(){return _reactNativeRouterFlux.Actions.newsFeed();}},
 _reactNative2.default.createElement(_Entypo2.default,{name:'bell',size:22,color:'white'}),
 _reactNative2.default.createElement(_reactNative.View,{style:styles.newsDot}))),
 
@@ -1445,16 +1452,6 @@ shadowColor:"#000000",
 shadowOpacity:0.5,
 shadowRadius:12},
 
-menuButton:{
-alignItems:'center',
-height:50,
-justifyContent:'center',
-marginTop:18,
-position:'absolute',
-right:0,
-top:0,
-width:50},
-
 loading:{
 backgroundColor:'white',
 opacity:0.5,
@@ -1466,10 +1463,21 @@ right:0},
 navbar:{
 backgroundColor:_globalStyles2.default.COLORS.headerBg,
 borderBottomColor:'#324',
-borderBottomWidth:1},
+borderBottomWidth:1,
+height:50},
 
 scene:{
-paddingTop:63},
+paddingTop:50},
+
+newsButton:{
+alignItems:'center',
+height:50,
+justifyContent:'center',
+marginTop:18,
+position:'absolute',
+right:0,
+top:-15,
+width:50},
 
 newsDot:{
 backgroundColor:'red',
@@ -88705,6 +88713,7 @@ done();});},
 
 saveTodos:function(){
 var todo_array=Array.from(global.todos);
+console.log("saving todos");
 AsyncStorage.setItem('todo',JSON.stringify(todo_array)).
 then(function(resp){
 console.log("save todos",resp);}).
@@ -93108,7 +93117,7 @@ _reactNative.Alert.alert("Guest "+guest.guest_id+" not found!");
 return null;}
 
 guest.event_list=global.con_data.events.
-filter(function(e){return e.guest_list.includes(guest.guest_id);}).
+filter(function(e){return _lodash2.default.includes(e.guest_list,guest.guest_id);}).
 map(function(e){return e.event_id;});
 
 return (
@@ -93735,35 +93744,51 @@ View=_reactNative2.default.View;
 var window=Dimensions.get('window');var 
 
 
-TabIcon=function(_React$Component){babelHelpers.inherits(TabIcon,_React$Component);function TabIcon(){babelHelpers.classCallCheck(this,TabIcon);return babelHelpers.possibleConstructorReturn(this,Object.getPrototypeOf(TabIcon).apply(this,arguments));}babelHelpers.createClass(TabIcon,[{key:'handlePress',value:function handlePress()
+TabIcon=function(_React$Component){babelHelpers.inherits(TabIcon,_React$Component);function TabIcon(){babelHelpers.classCallCheck(this,TabIcon);return babelHelpers.possibleConstructorReturn(this,Object.getPrototypeOf(TabIcon).apply(this,arguments));}babelHelpers.createClass(TabIcon,[{key:'render',value:function render()
 {
-if(this.props.onPress){
-this.props.onPress();
-return;}
+var bgColor=this.props.selected?'#558':'transparent';
+var textColor=this.props.selected?'white':'#335';
+var iconColor=this.props.selected?'white':'#558';
+
+return (
+_reactNative2.default.createElement(TouchableOpacity,{style:[styles.tab,{backgroundColor:bgColor}],onPress:this.props.onPress},
+_reactNative2.default.createElement(_Entypo2.default,{name:this.props.icon,color:iconColor,size:this.props.iconSize||20}),
+_reactNative2.default.createElement(Text,{style:{color:textColor}},this.props.text)));}}]);return TabIcon;}(_reactNative2.default.Component);var 
+
+
+
+
+
+Tabbers=function(_React$Component2){babelHelpers.inherits(Tabbers,_React$Component2);
+
+function Tabbers(){babelHelpers.classCallCheck(this,Tabbers);var _this2=babelHelpers.possibleConstructorReturn(this,Object.getPrototypeOf(Tabbers).call(this));
+
+_this2.state={
+selected:0};return _this2;}babelHelpers.createClass(Tabbers,[{key:'handlePress',value:function handlePress(
+
+
+
+action){
+if(action==="menu"){
+console.log(this.props);
+this.props.onPressMenuButton();
+return;}else 
+{
+_reactNativeRouterFlux.Actions[action]();}
 
 this.setState({
-selected:true});
-
-_reactNativeRouterFlux.Actions[this.props.action]();}},{key:'render',value:function render()
-
-{
-return (
-_reactNative2.default.createElement(TouchableOpacity,{style:styles.tab,onPress:this.handlePress.bind(this)},
-_reactNative2.default.createElement(_Entypo2.default,{name:this.props.icon,color:'#558',size:this.props.iconSize||20}),
-_reactNative2.default.createElement(Text,{style:{color:'#335'}},this.props.text)));}}]);return TabIcon;}(_reactNative2.default.Component);var 
+selected:action});}},{key:'render',value:function render()
 
 
 
-
-
-Tabbers=function(_React$Component2){babelHelpers.inherits(Tabbers,_React$Component2);function Tabbers(){babelHelpers.classCallCheck(this,Tabbers);return babelHelpers.possibleConstructorReturn(this,Object.getPrototypeOf(Tabbers).apply(this,arguments));}babelHelpers.createClass(Tabbers,[{key:'render',value:function render()
 {
 return (
 _reactNative2.default.createElement(View,{style:styles.container},
-_reactNative2.default.createElement(TabIcon,{icon:'home',action:'dashboard',text:'Home'}),
-_reactNative2.default.createElement(TabIcon,{icon:'calendar',action:'schedule',text:'Schedule'}),
-_reactNative2.default.createElement(TabIcon,{icon:'users',action:'guests',text:'Guests'}),
-_reactNative2.default.createElement(TabIcon,{icon:'dots-three-horizontal',onPress:this.props.onPressMenuButton,text:'More'})));}}]);return Tabbers;}(_reactNative2.default.Component);exports.default=Tabbers;
+_reactNative2.default.createElement(TabIcon,{onPress:this.handlePress.bind(this,"dashboard"),selected:this.state.selected==="dashboard",icon:'home',text:'Home'}),
+_reactNative2.default.createElement(TabIcon,{onPress:this.handlePress.bind(this,"schedule"),selected:this.state.selected==="schedule",icon:'calendar',text:'Schedule'}),
+_reactNative2.default.createElement(TabIcon,{onPress:this.handlePress.bind(this,"guests"),selected:this.state.selected==="guests",icon:'users',text:'Guests'}),
+_reactNative2.default.createElement(TabIcon,{onPress:this.handlePress.bind(this,"menu"),selected:this.state.selected==="menu",icon:'dots-three-horizontal',text:'More'})));}}]);return Tabbers;}(_reactNative2.default.Component);exports.default=Tabbers;
+
 
 
 
@@ -93783,7 +93808,7 @@ flex:1,
 flexDirection:'column',
 paddingTop:8}});
 });
-__d('ConNexusReact/components/Toast.js',function(global, require, module, exports) {  Object.defineProperty(exports,"__esModule",{value:true});var _reactNative=require('react-native/Libraries/react-native/react-native.js');var _reactNative2=babelHelpers.interopRequireDefault(_reactNative);var
+__d('ConNexusReact/components/Toast.js',function(global, require, module, exports) {  Object.defineProperty(exports,"__esModule",{value:true});var _reactNative=require('react-native/Libraries/react-native/react-native.js');var _reactNative2=babelHelpers.interopRequireDefault(_reactNative);var 
 
 
 Animated=_reactNative2.default.Animated;var 

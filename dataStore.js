@@ -106,6 +106,7 @@ export default {
 
   saveTodos: () => {
     let todo_array = Array.from(global.todos);
+    console.log("saving todos");
     AsyncStorage.setItem('todo', JSON.stringify(todo_array))
       .then(resp => {
         console.log("save todos", resp);
